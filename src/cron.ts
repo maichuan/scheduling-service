@@ -7,7 +7,6 @@ export const updateRanking = () => {
   cron.schedule(time, async () => {
     console.log('---------------------')
     console.log('Running Cron Job')
-
     const { data, status } = await serverClient.post(
       '/rank',
       {},
